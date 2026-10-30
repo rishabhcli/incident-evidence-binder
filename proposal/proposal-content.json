@@ -1,0 +1,72 @@
+{
+  "title": "Incident Evidence Binder",
+  "subtitle": "UGREEN Hackathon 2026 on AI NAS | Round 1 Proposal | Track: Open Innovation",
+  "entrant": "Entrant: Rishabh Bansal",
+  "items": [
+    {
+      "h": "1. What it does",
+      "t": [
+        "It builds a time-ordered, hash-checked evidence binder for one incident, such as a water leak, from camera events, photos and documents on the NAS, and later re-checks it."
+      ]
+    },
+    {
+      "h": "2. Target user and problem",
+      "t": [
+        "Homeowners and renters who need proof for an insurance claim, landlord or police report. Their evidence is scattered across camera history, photos and PDFs, and gaps surface only after filing."
+      ]
+    },
+    {
+      "h": "3. Solution",
+      "t": [
+        "The Skill reads the user's own policy or lease to list the proof it requires, matches that list against what the NAS holds, and shows the gaps. After approval it copies chosen files into a new folder with a timeline and a SHA-256 manifest."
+      ]
+    },
+    {
+      "h": "4. Main user flow",
+      "t": [
+        "The user names an incident window and confirms the scope, reviews a timeline, requirement checklist and gap list, then approves items. A hash report follows. Later, \"check my evidence binder\" reports unchanged, changed, missing and added files."
+      ]
+    },
+    {
+      "h": "5. Difference",
+      "t": [
+        "Photo and document Skills sort by topic. This one centers on a single incident, starts from what the user's own policy demands, merges three sources into one chronology, never touches originals, and shows later whether copies changed. It does not identify people."
+      ]
+    },
+    {
+      "h": "6. NAS features used",
+      "t": [
+        "By SKILL.md build step: 2 user directory lookup; 3 and 7 camera events and evidence; 4 photo search, metadata, vision description, OCR; 5 file search plus document answering, extraction, reconcile; 8 folder creation and copy; 9 SHA-256; 10 knowledge save-text; 12 tags. Footage and documents stay on the NAS."
+      ]
+    },
+    {
+      "h": "7. Technical approach",
+      "t": [
+        "Markdown orchestration. The parent Skill sends delegate commands to the file, security-monitor, photo, document and knowledge experts, passing each real result to the next step. Inputs: incident window, baseline window, cameras, folders, policy file. Reads follow scope confirmation; writes go only into a new folder after plan approval. Models belong to the experts; the Skill calls no outside API."
+      ]
+    },
+    {
+      "h": "8. Status",
+      "t": [
+        "Built: SKILL.md and four reference pages, drafted with an AI agent running Claude models, passing the Starter Kit static checker with zero findings. Not built: nothing has executed. Needs NAS testing: every delegation, snapshot saving, approval prompts, hash comparison, count limits."
+      ]
+    },
+    {
+      "h": "9. Validation plan",
+      "t": [
+        "Test 1: build from synthetic photos, an invented policy and a receipt; check timeline, checklist, copies, matching hashes, untouched originals. Test 2: alter one copy, remove another, add a file; verify mode must report all three and write nothing. Edge case: an empty window must report zero matches, create nothing and substitute no other dates."
+      ]
+    },
+    {
+      "h": "10. Limits and dependencies",
+      "t": [
+        "Never run on a NAS; the catalog marks action stability unknown. Camera evidence may be only a temporary reference, and cameras must be registered. AI descriptions can err, so the user reviews first. The manifest shows copies matched when made, not that originals were genuine; it is not legal advice."
+      ]
+    }
+  ],
+  "licenseHeading": "Third-party components and licenses (excluded from the word limit)",
+  "license": [
+    "UGREEN Skill Developer Package, uliya-skill-kit 0.7.3-en (hackathon starter kit download): terms published by UGREEN with the kit, no license file in the archive. Used locally for the capability catalog and static checker. Not included in the Skill ZIP.",
+    "Node.js 26.7.0 (MIT) ran the checker. Playwright 1.64.1 (Apache-2.0) with Chromium (BSD-3-Clause and bundled component licenses) rendered this PDF. Neither is included in the Skill ZIP, which holds only original Markdown."
+  ]
+}
