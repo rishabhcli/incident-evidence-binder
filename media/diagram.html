@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box} body{margin:0;width:1500px;height:1000px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:#f4f8f7;color:#1c2430;padding:48px 56px}
+h1{font-size:46px;margin:0;color:#0b3d36;letter-spacing:-0.5px} .sub{font-size:22px;color:#4a5a68;margin:6px 0 26px}
+.lab{font-size:20px;font-weight:700;color:#0b6b5c;text-transform:uppercase;letter-spacing:1.5px;margin:0 0 10px}
+.row{display:flex;gap:16px;align-items:stretch;margin-bottom:28px}
+.box{flex:1;background:#fff;border:2px solid #cfe7e2;border-radius:14px;padding:16px 18px;font-size:21px;line-height:1.3}
+.box b{display:block;color:#0b6b5c;font-size:22px;margin-bottom:6px}
+.arrow{align-self:center;font-size:34px;color:#0b6b5c}
+.box.dark{background:#0b6b5c;color:#fff;border-color:#0b6b5c}.box.dark b{color:#d6f3ec}
+.src{display:flex;flex-direction:column;gap:8px;flex:1.25}.src .box{padding:10px 14px;font-size:19px}
+.foot{position:absolute;left:56px;bottom:34px;font-size:20px;color:#4a5a68}
+</style></head><body>
+<h1>Incident Evidence Binder</h1><div class="sub">A UGOS Skill for one incident: camera events, photos and documents into a checked, time-ordered binder</div>
+<div class="lab">Build mode</div>
+<div class="row">
+<div class="box"><b>1. Confirm scope</b>Window, cameras, folders and policy file are repeated back. Nothing is written yet.</div><div class="arrow">&rarr;</div>
+<div class="src"><div class="box"><b>Camera events</b>event timeline</div><div class="box"><b>Photos + baseline</b>time, description, OCR</div><div class="box"><b>Documents + policy</b>requirements with page quotes</div></div><div class="arrow">&rarr;</div>
+<div class="box"><b>2. Review</b>Timeline, requirement checklist and gap list, built only from real results.</div><div class="arrow">&rarr;</div>
+<div class="box dark"><b>3. You approve</b>Items are added or removed. No approval, no write.</div>
+</div>
+<div class="row">
+<div class="box"><b>4. New folder</b>Evidence-hint-date with four sub-folders. Existing folders are never reused.</div><div class="arrow">&rarr;</div>
+<div class="box"><b>5. Copy, never move</b>Originals stay untouched.</div><div class="arrow">&rarr;</div>
+<div class="box"><b>6. SHA-256 check</b>Original and copy are compared for every file.</div><div class="arrow">&rarr;</div>
+<div class="box"><b>7. Saved in the binder</b>Timeline file and hash manifest. Optional statement draft and tag.</div>
+</div>
+<div class="lab">Verify mode (any later day)</div>
+<div class="row">
+<div class="box"><b>Read the manifest</b>and list the binder folder</div><div class="arrow">&rarr;</div>
+<div class="box"><b>Recompute hashes</b>read only</div><div class="arrow">&rarr;</div>
+<div class="box dark"><b>Report</b>unchanged, changed, missing, added. Nothing is repaired or deleted.</div>
+</div>
+<div class="foot">Round 1 design. Not yet run on a UGREEN NAS. No identity lookups, no deletion, nothing leaves the NAS.</div>
+</body></html>

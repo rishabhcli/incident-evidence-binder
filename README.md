@@ -1,6 +1,6 @@
 # Incident Evidence Binder
 
-A Skill for UGREEN UGOS AI NAS, written for the UGREEN Hackathon 2026 on AI NAS (Round 1, Open Innovation track).
+A Skill for UGREEN UGOS AI NAS, written for the UGREEN Hackathon 2026 on AI NAS (Round 1, Automate Your Workflow track).
 
 It builds one organized evidence binder for a single incident (water leak, car damage, break-in attempt, deposit dispute) from camera events, photos and documents that are already on the NAS. It reads the user's own policy or lease to list the proof that document asks for and shows what is missing. After the user approves, it copies the chosen files into a new folder with a timeline and a SHA-256 manifest. A second mode re-checks a binder later and reports files that changed, went missing or were added.
 

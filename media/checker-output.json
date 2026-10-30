@@ -1,0 +1,38 @@
+{
+  "checkFormatVersion": "2.0.0",
+  "status": "static-pass",
+  "target": {
+    "skillName": "incident-evidence-binder"
+  },
+  "catalog": {
+    "checkedVersion": "2.0.0"
+  },
+  "files": [
+    {
+      "path": "references/binder-layout.md",
+      "sha256": "78b1ddfcdbc87f8bd0733a57e1802b73475cc32bf0201496ea46f4be2c162e5a"
+    },
+    {
+      "path": "references/capability-map.md",
+      "sha256": "c3bc090408522f92f256a6795f3bb1cfe3b614c64fd83408214c9aa8b9ae1b99"
+    },
+    {
+      "path": "references/disclosure.md",
+      "sha256": "be15cc22c15b482b936a57ec0f445121671d8b50f3a5ae79114f43ae191f5a9c"
+    },
+    {
+      "path": "references/test-plan.md",
+      "sha256": "d07574c6d691151b1b75968bf99ffcef25aa6bb6e3da332c2d52f9cd573cde1e"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "2bc8a4ba7cc3513b461e991a27f0e50f39673b5b4563b248229772d76b84c7fa"
+    }
+  ],
+  "summary": {
+    "errors": 0,
+    "warnings": 0,
+    "info": 0
+  },
+  "diagnostics": []
+}
